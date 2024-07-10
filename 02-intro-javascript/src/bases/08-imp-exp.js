@@ -7,7 +7,7 @@ import heroes  from "../data/heroes";
 //console.log(owners)
 /*
 const getHeroeByid = (id) => {
-    return heroes.find((heroe) => {
+    return heroes.find((heroe) => {npm start
         if (heroe.id === id){
             return true;
         }else{
