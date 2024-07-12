@@ -10,7 +10,11 @@ const getResult = (a,b) =>{
     return a*b;
 }
 */
-export const FirstApp = ({tittle,subTittle}) => {
+export const FirstApp = ({
+  tittle,
+  subTittle = 'Daniel fragoso',
+  name
+}) => {
 
   /*
   if (!tittle) {
@@ -24,6 +28,7 @@ export const FirstApp = ({tittle,subTittle}) => {
       {/* <h1>{getResult(1,4)}</h1> */}
       <h1>{tittle}</h1>
       <p>{subTittle}</p>
+      <p>{name}</p>
     </>
   )
 }
@@ -33,7 +38,14 @@ export const FirstApp = ({tittle,subTittle}) => {
 
 //Las protypes se definen de la siguiente manera
 
-FirstApp.PropTypes = {
+FirstApp.propTypes = {
   tittle:PropTypes.string.isRequired,
-  subTittle:PropTypes.number.isRequired
+  subTittle:PropTypes.string.isRequired
 }
+
+FirstApp.defaultProps = {  // Estas son propiedades por defecto 
+  tittle: "No hay titulo",
+  subTittle: "No hay subtitulo",
+  name:"Daniel Fragoso"
+}
+
