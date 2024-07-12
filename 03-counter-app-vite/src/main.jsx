@@ -17,6 +17,6 @@ function App() {  // Esto se usa para hacer los componentes  "componentes basado
 
 ReactDOM.createRoot(document.getElementById('root')).render(   // Renderizamos el componente en donde lo estemos ejecutando 
     <React.StrictMode>
-        <FirstApp/>  
+        <FirstApp tittle="Hola soy daniel" subTittle={123}/>  
     </React.StrictMode>
 );
