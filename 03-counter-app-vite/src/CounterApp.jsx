@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 //https://github.com/Klerith/react-vite-counter-app/tree/fin-seccion-4/src
 export const CounterApp  =({value}) => {
 
-    const [counter,setCounter] = useState(value)
+    const [counter,setCounter] = useState(value)  //hook  counter el estado actual
     const handleAdd  = (event,newValue) => { //FUNCION FLECHA
         //console.log(event);
         //console.log('+1');

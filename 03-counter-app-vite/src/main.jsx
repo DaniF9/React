@@ -20,6 +20,7 @@ function App() {  // Esto se usa para hacer los componentes  "componentes basado
 
 ReactDOM.createRoot(document.getElementById('root')).render(   // Renderizamos el componente en donde lo estemos ejecutando 
     <React.StrictMode>
-        <CounterApp value={10}/> 
+        {/* <CounterApp value={10}/>  */}
+        <FirstApp tittle="Hola soy Daniel"/>
     </React.StrictMode>
 );
