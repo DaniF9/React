@@ -26,7 +26,7 @@ export const FirstApp = ({
     <>
       {/* <code>{JSON.stringify(newMessage)}</code> */}
       {/* <h1>{getResult(1,4)}</h1> */}
-      <h1>{tittle}</h1>
+      <h1 data-testid="test-title">{tittle}</h1>
       <p>{subTittle}</p>
       <p>{name}</p>
     </>
