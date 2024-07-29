@@ -1,4 +1,5 @@
 import { useState } from "react" //Esto es para utilizar el usestate
+import {AddCategory} from "./components/AddCategory";
 
 
 
@@ -23,6 +24,8 @@ export const GifExpertApp = () => {
       <h1>GiftExpertApp</h1>
 
       {/* Input */}
+
+     <AddCategory/>
 
       {/* Listado de gif */}
       <button onClick={addCategory}>Agregar Categoria</button>
