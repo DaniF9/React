@@ -11,7 +11,7 @@ const onInputChange = ({target}) => {
 }
 
 const onSubmit = (event) =>{ 
-    event.preventDefault();
+    event.preventDefault(); //Para no realizar la carga del navegador
     console.log(inputValue);
 
 }
