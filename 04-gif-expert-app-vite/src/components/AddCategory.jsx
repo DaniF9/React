@@ -1,9 +1,9 @@
 import { useState } from "react";
+//https://gist.github.com/Klerith/ca7e57fae3c9ab92ad08baadc6c26177 esto es para prepara el ambiente de pruebas
 
+export const AddCategory = ({onNewCategory}) => {  //Descomponemos el setCategories, aqui se ponen todas las propiedades de nuestro componente
 
-export const AddCategory = () => {
-
-const [inputValue, setInputValue] = useState('One Punch');
+const [inputValue, setInputValue] = useState('');
 
 const onInputChange = ({target}) => {
 
@@ -12,19 +12,24 @@ const onInputChange = ({target}) => {
 
 const onSubmit = (event) =>{ 
     event.preventDefault(); //Para no realizar la carga del navegador
-    console.log(inputValue);
 
+    if (inputValue.trim().length <= 1) return; // Aqui es para que si lo que buscamos tienes menos de una letra no se guarde nada
+    
+    //setCategories(categories => [inputValue, ...categories]); //Aqui vamos a mandar a llamar un callback
+    
+    setInputValue('');
+    onNewCategory(inputValue.trim());
 }
   return (
 
     
     <>
-      <form onSubmit={(event) => onSubmit(event)}>
+      <form onSubmit={onSubmit}> {/* aqui lo que se hace para dejar igual de la sig manera {(event) => onSubmit(event)}*/}
         <input 
         type="text"
         placeholder="Buscar Gifs"
         value={inputValue}
-        onChange={(event) => onInputChange(event)}
+        onChange={ onInputChange}
         />
       </form>
     </>
