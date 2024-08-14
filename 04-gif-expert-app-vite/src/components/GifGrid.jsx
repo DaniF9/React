@@ -1,6 +1,7 @@
 
 import {GifItem} from "./GifItem";
 import {useFetchGifs} from '../hooks/useFetchGifs'
+import PropTypes from 'prop-types';
 
 
 export const GifGrid = ({category}) => {  // La ejecuacion de una funcion nunca se debe poner dentro de un functional component
@@ -43,4 +44,11 @@ export const GifGrid = ({category}) => {  // La ejecuacion de una funcion nunca 
     </>
   )
 }
+
+GifGrid.propTypes = {
+
+    category: PropTypes.string.isRequired,
+}
+
+
 

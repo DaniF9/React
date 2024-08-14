@@ -1,5 +1,6 @@
 import { useState } from "react";
 //https://gist.github.com/Klerith/ca7e57fae3c9ab92ad08baadc6c26177 esto es para prepara el ambiente de pruebas
+import PropTypes from 'prop-types';
 
 export const AddCategory = ({onNewCategory}) => {  //Descomponemos el setCategories, aqui se ponen todas las propiedades de nuestro componente
 
@@ -24,7 +25,7 @@ const onSubmit = (event) =>{
 
     
     <>
-      <form onSubmit={onSubmit}> {/* aqui lo que se hace para dejar igual de la sig manera {(event) => onSubmit(event)}*/}
+      <form onSubmit={onSubmit} aria-label="form"> {/* aqui lo que se hace para dejar igual de la sig manera {(event) => onSubmit(event)}*/}
         <input 
         type="text"
         placeholder="Buscar Gifs"
@@ -34,6 +35,11 @@ const onSubmit = (event) =>{
       </form>
     </>
   )
+}
+
+
+AddCategory.propTypes = {
+  onNewCategory: PropTypes.func.isRequired
 }
 
 
