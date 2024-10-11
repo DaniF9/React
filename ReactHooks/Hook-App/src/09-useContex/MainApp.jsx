@@ -1,13 +1,25 @@
-import { Routes,Route, Navigate } from "react-router-dom"
+ import { Routes,Route, Navigate, Link } from "react-router-dom"
 import { HomePage } from "./HomePage"
 import { LoginPage } from "./LoginPage"
 import { AboutPage } from "./AboutPage"
+import { Navbar } from "./Navbar"
+import { UserProvider } from "./context/UserProvider"
+
 
 
 export const MainApp = () => {
   return (
     <>
-      <h1>Main App</h1>
+
+    <UserProvider>
+      {/* <h1>Main App</h1> */}
+      {/* Estos link se usan para evitar el refresh y que se vuelva a cargar todo */}
+      {/* <Link to="/"> HOME </Link>
+      <Link to="/about"> About </Link>
+      <Link to="/login"> Login</Link> */}
+
+      <Navbar/>
+
       <hr />
 
       <Routes>
@@ -18,6 +30,8 @@ export const MainApp = () => {
         <Route path="/*" element={<LoginPage/>}/>
         <Route path="/*" element={<Navigate to="/about"/>}/>
       </Routes>
+
+      </UserProvider>
     </>
   )
 }
